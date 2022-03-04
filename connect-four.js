@@ -165,7 +165,9 @@ currPlayer === 1 ? currPlayer = 2 : currPlayer = 1;
        var vert = [[y, x], [y + 1, x], [y + 2, x], [y + 3, x]];
        var diagDR = [[y, x], [y + 1, x + 1], [y + 2, x + 2], [y + 3, x + 3]];
        var diagDL = [[y, x], [y + 1, x - 1], [y + 2, x - 2], [y + 3, x - 3]];
- 
+
+ //creating an array of horizontal, vertical, diag right and diag left by simple addition operators. Then they run each of the arrays of 'cells' through the _win function. If any of the functions return true, the entire function 'check for win' will return true!
+
        if (_win(horiz) || _win(vert) || _win(diagDR) || _win(diagDL)) {
          return true;
        }

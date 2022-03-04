@@ -4,6 +4,7 @@
     width: 50px;
     height: 50px;
     border: solid 1px #666;
+    position: relative;
   }
   
   /* pieces are div within game table cells: draw as colored circles */
@@ -11,9 +12,13 @@
   .piece {
     /* TODO: make into circles */
     margin: 5px;
+    top: -1px;
     width: 80%;
     height: 80%;
     border-radius: 50%;
+    border: solid 1px black;
+    position: absolute;
+    animation: movedown 1s ease-in-out;
   }
 
   #player1 {
@@ -34,5 +39,10 @@
   
   #column-top td:hover {
     background-color: gold;
+  }
+
+  @keyframes movedown{
+      from{top : -400px}
+      to {top: 0px}
   }
   
