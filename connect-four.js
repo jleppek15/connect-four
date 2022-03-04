@@ -23,22 +23,17 @@
      makeHtmlBoard();
  });
 
-  function resetBoard(){
-    //Resets all values in the board then makes a new one
+function resetBoard(){
     for(let i = 0; i < HEIGHT; i++){
       board.pop()
     }
-  
-    //Deletes HtmlBoard then makes a new one
+
     let tbl = document.getElementById('board');
     if(tbl) tbl.parentNode.removeChild(tbl);
     let div = document.querySelector('#game')
     let newBoard = document.createElement('table');
     newBoard.setAttribute('id', 'board')
     div.appendChild(newBoard)
-  
-    gameOver = false
-  
   }
  
  function makeBoard() {
